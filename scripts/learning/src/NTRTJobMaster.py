@@ -37,12 +37,3 @@ if __name__ == "__main__":
     numProcesses = int(sys.argv[2])
     jobMaster = EvolutionJobMaster(configFile, numProcesses)
     jobMaster.beginTrial()
-
-
-
-
-
-
-
-
-

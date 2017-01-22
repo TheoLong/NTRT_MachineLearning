@@ -1,0 +1,1 @@
+/usr/bin/g++   -fPIC -std=c++0x -Wall -Wextra -pedantic -O3 -DNDEBUG  -fPIC CMakeFiles/jsontestrunner_exe.dir/main.cpp.o  -o jsontestrunner_exe -rdynamic ../lib_json/libjsoncpp.a 

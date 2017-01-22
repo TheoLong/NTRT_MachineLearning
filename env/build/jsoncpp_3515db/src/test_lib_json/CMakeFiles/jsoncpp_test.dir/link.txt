@@ -1,0 +1,1 @@
+/usr/bin/g++   -fPIC -std=c++0x -Wall -Wextra -pedantic -O3 -DNDEBUG  -fPIC CMakeFiles/jsoncpp_test.dir/jsontest.cpp.o CMakeFiles/jsoncpp_test.dir/main.cpp.o  -o jsoncpp_test -rdynamic ../lib_json/libjsoncpp.a 

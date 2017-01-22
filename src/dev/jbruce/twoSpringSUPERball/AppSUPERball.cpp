@@ -36,9 +36,6 @@
 // The C++ Standard Library
 #include <iostream>
 
-/*ADDED*/
-//#include "T6RestLengthController.h"
-
 /**
  * The entry point.
  * @param[in] argc the number of command-line arguments
@@ -63,7 +60,7 @@ int main(int argc, char** argv)
     const tgWorld::Config config(98.1); // gravity, cm/sec^2  Use this to adjust length scale of world.
         // Note, by changing the setting below from 981 to 98.1, we've
         // scaled the world length scale to decimeters not cm.
-    
+
     tgWorld world(config, ground);
 
     // Second create the view

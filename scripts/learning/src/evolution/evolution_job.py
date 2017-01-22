@@ -57,7 +57,7 @@ class EvolutionJob(NTRTJob):
                 else:
                     trialLength = self.args['length']
                 #TODO improve error handling here
-                subprocess.check_call([self.args['executable'], "-l", self.args['filename'], "-P", self.args['path'], "-s", str(trialLength), "-b", str(run[0]), "-H", str(run[1]), "-a", str(run[2]), str(run[3])], stdout=logFile)
+                subprocess.check_call([self.args['executable'], "-l", self.args['filename'], "-P", self.args['path'], "-s", str(trialLength), "-b", str(run[0]), "-H", str(run[1]), "-a", str(run[2]), "-B", str(run[3])], stdout=logFile)
             sys.exit()
 
     def processJobOutput(self):

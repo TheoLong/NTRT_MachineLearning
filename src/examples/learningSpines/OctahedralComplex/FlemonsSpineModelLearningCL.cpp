@@ -75,9 +75,6 @@ void FlemonsSpineModelLearningCL::setup(tgWorld& world)
     const double damping = .01*stiffness;
     const double pretension = 0.0;
     
-    //THIS IS ADDED 
-    const bool history = true;
-    
     /// @todo acceleration constraint was removed on 12/10/14 Replace with tgKinematicActuator as appropreate
     const tgSpringCableActuator::Config stringConfig(stiffness, damping, pretension, false, 7000, 24);
     

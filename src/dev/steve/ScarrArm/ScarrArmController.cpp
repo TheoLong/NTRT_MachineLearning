@@ -129,11 +129,11 @@ void ScarrArmController::setBrachioradialisTargetLength(ScarrArmModel& subject, 
 void ScarrArmController::setAnconeusTargetLength(ScarrArmModel& subject, double dt) {
     const double mean_anconeus_length = 6; //TODO: define according to vars
     double newLength = 0;
-    const double amplitude = mean_anconeus_length/1;  
+    const double amplitude = mean_anconeus_length/1;
     const double angular_freq = 2;
     const double phaseleft = 0;
     const double phaseright = phaseleft + M_PI;
-    const double dcOffset = mean_anconeus_length; 
+    const double dcOffset = mean_anconeus_length;
     const std::vector<tgBasicActuator*> anconeusleft = subject.find<tgBasicActuator>("right anconeus");
     const std::vector<tgBasicActuator*> anconeusright = subject.find<tgBasicActuator>("left anconeus");
 
@@ -217,7 +217,7 @@ void ScarrArmController::applyActions(ScarrArmModel& subject, vector< vector <do
 	for (size_t i = 0; i < muscles.size(); ++i)	{
 		tgBasicActuator * const pMuscle = muscles[i];
 		assert(pMuscle != NULL);
-		cout<<"i: "<<i<<" length: "<<act[i][0]<<endl;
+		//cout<<"i: "<<i<<" length: "<<act[i][0]<<endl;
 		pMuscle->setControlInput(act[i][0]);
 	}
 }

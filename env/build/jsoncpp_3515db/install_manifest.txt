@@ -1,0 +1,12 @@
+/media/psf/NTRT_MachineLearning/env/lib/pkgconfig/jsoncpp.pc
+/media/psf/NTRT_MachineLearning/env/lib/libjsoncpp.a
+/media/psf/NTRT_MachineLearning/env/include/json/assertions.h
+/media/psf/NTRT_MachineLearning/env/include/json/autolink.h
+/media/psf/NTRT_MachineLearning/env/include/json/config.h
+/media/psf/NTRT_MachineLearning/env/include/json/features.h
+/media/psf/NTRT_MachineLearning/env/include/json/forwards.h
+/media/psf/NTRT_MachineLearning/env/include/json/json.h
+/media/psf/NTRT_MachineLearning/env/include/json/reader.h
+/media/psf/NTRT_MachineLearning/env/include/json/value.h
+/media/psf/NTRT_MachineLearning/env/include/json/version.h
+/media/psf/NTRT_MachineLearning/env/include/json/writer.h

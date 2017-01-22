@@ -6,7 +6,7 @@
  * The NASA Tensegrity Robotics Toolkit (NTRT) v1 platform is licensed
  * under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * YoT6u may obtain a copy of the License at
+ * You may obtain a copy of the License at
  * http://www.apache.org/licenses/LICENSE-2.0.
  * 
  * Unless required by applicable law or agreed to in writing,
@@ -35,12 +35,6 @@
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library
 #include <iostream>
-
-
-/* ADDED */
-#include "T6TensionController.h"
-
-
 
 /**
  * The entry point.
@@ -83,8 +77,8 @@ int main(int argc, char** argv)
 
     // Fifth, select the controller to use, and attach it to the model.
     // For example, you could run the following to use the T6TensionController:
-    T6TensionController* const pTC = new T6TensionController(10000);
-    myModel->attach(pTC);
+    //T6TensionController* const pTC = new T6TensionController(10000);
+    //myModel->attach(pTC);
 
     // Finally, add out model to the simulation
     simulation.addModel(myModel);

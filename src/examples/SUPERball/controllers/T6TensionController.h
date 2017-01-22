@@ -50,7 +50,7 @@ public:
 	 * @param[in] tension, a double specifying the desired tension
 	 * throughougt structure. Must be non-negitive
 	 */
-    T6TensionController(const double tension = 0.01);
+    T6TensionController(const double tension = .01);
     
     /**
      * Nothing to delete, destructor must be virtual

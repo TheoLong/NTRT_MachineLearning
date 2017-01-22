@@ -14,9 +14,9 @@ subdirs(
     muscleNP
     jbruce
     dhustigschultz
-    CPG_feedback
     eajung
-    cpeterson
-    kschro1
+    ezhu
+    mcdaly
+	bgigous
 )
 

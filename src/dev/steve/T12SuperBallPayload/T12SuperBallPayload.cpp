@@ -260,7 +260,7 @@ void T12SuperBallPayload::setup(tgWorld& world)
 //    double rotationAngle = M_PI/2;
 //    s.addRotation(rotationPoint, rotationAxis, rotationAngle);
 
-    s.move(btVector3(0,30,0));
+    //s.move(btVector3(0,30,0));
 
     // Create the build spec that uses tags to turn the structure into a real model
     tgBuildSpec spec;
@@ -285,9 +285,8 @@ void T12SuperBallPayload::setup(tgWorld& world)
 
     //map the rods and add the markers to them
     addMarkers(s);
-    
-	
-    btVector3 location(0,0,0);
+
+    btVector3 location(0,10.0,0);
     btVector3 rotation(0.0,0.6,0.8);
   	btVector3 speed(0,20,100);
     this->moveModel(location,rotation,speed);
@@ -323,7 +322,6 @@ void T12SuperBallPayload::teardown()
     tgModel::teardown();
 }
 
-/*
 void T12SuperBallPayload::moveModel(btVector3 positionVector,btVector3 rotationVector,btVector3 speedVector)
 {
     std::vector<tgRod *> rods=find<tgRod>("rod");
@@ -340,19 +338,3 @@ void T12SuperBallPayload::moveModel(btVector3 positionVector,btVector3 rotationV
 			rods[i]->getPRigidBody()->setWorldTransform(initialTransform * rods[i]->getPRigidBody()->getWorldTransform());
 	}
 }
-*/
-
-void T12SuperBallPayload::moveModel(btVector3 positionVector,btVector3 rotationVector,btVector3 speedVector)
-{
-    std::vector<tgBaseRigid *> rods = tgCast::filter<tgModel, tgBaseRigid> (getDescendants());
-	
-	for(int i=0;i<rods.size();i++)
-	{
-			rods[i]->getPRigidBody()->setLinearVelocity(speedVector);
-	}
-}
-
-
-
-
-

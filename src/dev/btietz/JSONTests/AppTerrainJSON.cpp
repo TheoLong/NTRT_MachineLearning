@@ -26,9 +26,6 @@
 
 #include "AppTerrainJSON.h"
 #include "tgCPGJSONLogger.h"
-#include <string>
-
-std::string lowerPath = "default";
 
 AppTerrainJSON::AppTerrainJSON(int argc, char** argv)
 {
@@ -130,8 +127,7 @@ bool AppTerrainJSON::setup()
                                                     pfMax);
         /// @todo fix memory leak that occurs here
        JSONFeedbackControl* const myControl =
-        new JSONFeedbackControl(control_config, suffix, lowerPath);
-       // new JSONFeedbackControl(control_config, suffix, "bmirletz/TetrahedralComplex_Contact/");
+        new JSONFeedbackControl(control_config, suffix, "bmirletz/TetrahedralComplex_Contact/");
 
 #if (0)        
             tgCPGJSONLogger* const myLogger = 
@@ -176,7 +172,6 @@ void AppTerrainJSON::handleOptions(int argc, char **argv)
         ("start_z,z", po::value<double>(&startZ), "Z Coordinate of starting position for robot. Default = 0")
         ("angle,a", po::value<double>(&startAngle), "Angle of starting rotation for robot. Degrees. Default = 0")
         ("learning_controller,l", po::value<std::string>(&suffix), "Which learned controller to write to or use. Default = default")
-        ("lower_path,P", po::value<std::string>(&lowerPath), "Which resources folder in which you want to store controllers. Default = default")
     ;
 
     po::variables_map vm;
