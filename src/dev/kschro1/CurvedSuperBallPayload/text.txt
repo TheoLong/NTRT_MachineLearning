@@ -1,0 +1,58 @@
+void CurvedSuperBallPayload::addNodes(tgStructure& s)
+{
+    const double half_length = c.rod_length / 2;
+ 
+/*
+* the equation y=ax^2+bx+c
+* can be found from three points were
+* a=-(X1(Y2-Y3)-X2(Y1-Y3))/(X1*X2*(X1-X2))
+* b=(X1^2(Y2-Y3)-X2^2(Y1-Y3))/(X1*X2*(X1-X2))
+* c=Y3
+* 
+* NOTE:  this calculation is only valid if point3 is the Y intercept. 
+*/
+
+	double 	x, y, firstx=-half_length, firsty=c.rod_space, secondx=half_length, 
+		secondy=c.rod_space, thridy=c.rod_space+c.height;
+
+	double 	a=-(firstx*(secondy-thridy)-secondx*(firsty-thridy))/(firstx*secondx*(firstx-secondx));
+	double 	b=(firstx*firstx*(secondy-thridy)-secondx*secondx*(firsty-thridy))/(firstx*secondx*\
+			(firstx-secondx));
+	double 	c=thridy;
+
+	int 	d, e, f;
+	int 	i, j, k, count=0;
+/*
+*The third ForLoop creates the coordinate points of the first bar. 
+*The first two ForLoop then rotate that inital bar around to create the other 5 bars.
+*/
+
+for(int k=1;k>=-1;k=k-2)
+   {
+      for(int j=0;j>-3;j--)
+       {
+	d=j;
+	e=j+1;
+	f=j+2;
+	if(d>-1){}
+	else{
+	d=j+3;}
+	if(e>-1){}
+	else{
+	e=j+3;}
+
+	    for(int i=0;i<=NumSegments;i++)
+	        {
+	         x=firstx+(i*2*half_length*NumSegments);
+		 y=(a*(x*x)+b*x+c)*k;
+			std::cout << y << std::endl;
+		 nodePositions.push_back(btVector3(x, y, 0));
+		 s.addNode(nodePositions[count][d],nodePositions[count][e],nodePositions[count][f]);
+		 count++;
+			std::cout << count << std::endl;
+		}
+	}
+    }			
+
+
+}
